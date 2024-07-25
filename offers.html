@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Offers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            color: black;
+        }
+
+        body {
+            background: url("https://wallpapers.com/images/featured/casino-background-9o4pqrpgmrk3lszu.jpg") no-repeat center center/cover;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Container styling */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Heading styles */
+        .container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        /* Close button styling */
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            z-index: 3;
+        }
+
+        .close-button:hover {
+            background-color: #ff6f61;
+            color: #fff;
+        }
+
+        /* Offers section styling */
+        .offers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .offer-card {
+            background: linear-gradient(145deg, #e0c3fc, #8ec5fc);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Card hover effect */
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Card content */
+        .offer-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .offer-card p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Button styles */
+        .action-btn {
+            width: 100%;
+            padding: 12px 20px;
+            border: none;
+            background-color: #ff5722;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .action-btn:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+
+        .action-btn:active {
+            background-color: #d84315;
+        }
+
+        /* Decorative elements */
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        .star1 {
+            top: 10%;
+            left: 5%;
+        }
+
+        .star2 {
+            top: 15%;
+            right: 10%;
+        }
+
+        .star3 {
+            bottom: 20%;
+            left: 15%;
+        }
+
+        .star4 {
+            bottom: 25%;
+            right: 5%;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .offer-card {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .offer-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+
+    <div class="container animate__animated animate__fadeInUp">
+        <a href="index.html" class="close-button">&times;</a>
+        <h1>Exclusive Offers</h1>
+        <div class="offers">
+            <div class="offer-card animate__animated animate__fadeInLeft">
+                <h2>Weekend Special</h2>
+                <p>Get 50% extra tokens when you make a purchase this weekend!</p>
+                <button class="action-btn" onclick="window.location.href='purchase.html';">Claim Offer</button>
+            </div>
+            <div class="offer-card animate__animated animate__fadeInUp">
+                <h2>Refer a Friend</h2>
+                <p>Earn bonus tokens for every friend you refer who makes a purchase!</p>
+                <button class="action-btn" onclick="window.location.href='referral.html';">Refer Now</button>
+            </div>
+            <div class="offer-card animate__animated animate__fadeInRight">
+                <h2>Lucky Draw</h2>
+                <p>Participate in our lucky draw and stand a chance to win big prizes!</p>
+                <button class="action-btn" onclick="window.location.href='draw.html';">Join Draw</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

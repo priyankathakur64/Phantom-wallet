@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Program | Phantom Spin & Win</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            color: black;
+        }
+
+        body {
+            background: url("https://wallpapers.com/images/featured/casino-background-9o4pqrpgmrk3lszu.jpg") no-repeat center center/cover;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Page container */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative; /* For positioning close button */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Referral form */
+        .referral-form {
+            background: linear-gradient(145deg, #ffe140, #ff9a8b);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        .referral-form input {
+            width: calc(100% - 24px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .referral-form button {
+            padding: 10px 15px;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .referral-form button:hover {
+            background-color: #5a4cc9;
+        }
+
+        /* Referral list */
+        .referral-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .referral-list li {
+            background: #fff;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .referral-list li span {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Decorative elements */
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        .star1 {
+            top: 10%;
+            left: 5%;
+        }
+
+        .star2 {
+            top: 15%;
+            right: 10%;
+        }
+
+        .star3 {
+            bottom: 20%;
+            left: 15%;
+        }
+
+        .star4 {
+            bottom: 25%;
+            right: 5%;
+        }
+
+        /* Close button styling */
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #ff6f61;
+            color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+
+    <div class="container">
+        <a href="tokens.html" class="close-button">&times;</a>
+        <h1>Referral Program</h1>
+        
+        <div class="section">
+            <h2>Refer & Earn</h2>
+            <p>Invite your friends to join our platform and earn tokens for each successful referral. Share your unique referral link below.</p>
+        </div>
+
+        <div class="referral-form">
+            <input type="text" id="referralLink" value="https://example.com/referral?code=YOURUNIQUECODE" readonly>
+            <button onclick="copyReferralLink()">Copy Referral Link</button>
+        </div>
+
+        <div class="section">
+            <h2>Your Referrals</h2>
+            <ul class="referral-list" id="referralList">
+                <!-- List of referrals will be dynamically populated here -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function copyReferralLink() {
+            const referralLink = document.getElementById('referralLink');
+            referralLink.select();
+            document.execCommand('copy');
+            alert('Referral link copied to clipboard!');
+        }
+
+        // Example function to populate referral list - replace with actual data fetching
+        function populateReferrals() {
+            const referrals = [
+                { name: 'John Doe', status: 'Active' },
+                { name: 'Jane Smith', status: 'Pending' },
+            ];
+
+            const referralList = document.getElementById('referralList');
+            referralList.innerHTML = '';
+
+            referrals.forEach(referral => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<span>${referral.name}</span> <span>Status: ${referral.status}</span>`;
+                referralList.appendChild(listItem);
+            });
+        }
+
+        // Populate the referral list on page load
+        window.onload = populateReferrals;
+    </script>
+</body>
+</html>

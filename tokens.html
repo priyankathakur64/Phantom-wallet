@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokens | Phantom Spin & Win</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tokens.css">
+</head>
+<body>
+    <style>
+        /* General styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: url("https://wallpapers.com/images/featured/casino-background-9o4pqrpgmrk3lszu.jpg") no-repeat center center/cover;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Page container */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+/* Button styling */
+button {
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px 30px;
+    background-color: #6c5ce7;
+    border: 3px solid #20b2aa;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a4cc9;
+    box-shadow: 0 0 20px rgba(32, 178, 170, 0.8);
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    button {
+        width: 120px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    button {
+        width: 100px;
+        padding: 8px;
+    }
+}
+
+    </style>
+    <div class="container">
+        <a href="index.html" class="close-button">&times;</a>
+        <h1>Your Tokens</h1>
+        <p>Your current token balance is: <span id="tokenBalances">0</span> Tokens</p>
+        <button onclick="location.href='buy-tokens.html'">Buy Tokens</button>
+        <button onclick="location.href='earn-tokens.html'">Earn Tokens</button>
+        <button onclick="location.href='referral.html'">Referral Program</button>
+    </div>
+</body>
+</html>

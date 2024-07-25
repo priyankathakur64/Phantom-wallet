@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: url("https://wallpapers.com/images/featured/casino-background-9o4pqrpgmrk3lszu.jpg") no-repeat center center/cover;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    margin: 0;
+    animation: animateBackground 30s infinite linear;
+    position: relative; /* Added to make absolute positioning relative to the body */
+}
+
+@keyframes animateBackground {
+    0% {
+        background-size: 100% 100%;
+    }
+    50% {
+        background-size: 110% 110%;
+    }
+    100% {
+        background-size: 120% 120%;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.banner {
+    background: url("box.jpg") no-repeat center center/cover;
+    border-radius: 10px;
+    padding: 30px;
+    width: 70%;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure the background image is not cut off */
+}
+
+.banner h1 {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    color: indigo;
+}
+
+.banner h3 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.spin-btn,
+.connect-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background-color: #6c5ce7;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.spin-btn:before,
+.connect-btn:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: opacity 0.5s ease;
+    transform: rotate(30deg);
+    z-index: 2;
+}
+
+.spin-btn:hover:before,
+.connect-btn:hover:before {
+    opacity: 0;
+}
+
+.spin-btn:after,
+.connect-btn:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: opacity 0.5s ease;
+    transform: rotate(60deg);
+    z-index: 2;
+}
+
+.spin-btn:hover:after,
+.connect-btn:hover:after {
+    opacity: 0;
+}
+
+.connect-btn {
+    background-color: #720c8e;
+    position: absolute;
+    top: 20px; /* Adjust distance from the top */
+    right: 20px; /* Adjust distance from the right */
+    width: auto; /* Allow button to size naturally */
+    padding: 12px 20px; /* Padding for the button */
+}
+
+.connect-btn:hover {
+    background-color: #ce1fed;
+    transform: scale(1.05);
+    color: #fff; /* Ensure text color is visible on hover */
+}
+
+/* Animate.css blinking effect */
+.spin-btn:hover,
+.connect-btn:hover {
+    animation: 1s infinite animate__flash;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 70%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form img {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.form h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

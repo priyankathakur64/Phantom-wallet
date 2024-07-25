@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Tokens | Phantom Spin & Win</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            text-decoration: none;
+            color: black;
+        }
+
+        body {
+            background: url("https://wallpapers.com/images/featured/casino-background-9o4pqrpgmrk3lszu.jpg") no-repeat center center/cover;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Page container */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-top: 20px;
+            position: relative; /* For positioning close button */
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Section styling */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .section p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Activity cards */
+        .activity-card {
+            background: linear-gradient(145deg, #ffe140, #ff9a8b);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .activity-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .activity-card p {
+            font-size: 1rem;
+            color: black;
+        }
+
+        .activity-card button {
+            padding: 10px 15px;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .activity-card button:hover {
+            background-color: #5a4cc9;
+        }
+
+        /* Decorative elements */
+        .star {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            animation: twinkle 2s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        .star1 {
+            top: 10%;
+            left: 5%;
+        }
+
+        .star2 {
+            top: 15%;
+            right: 10%;
+        }
+
+        .star3 {
+            bottom: 20%;
+            left: 15%;
+        }
+
+        .star4 {
+            bottom: 25%;
+            right: 5%;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .activity-card {
+                padding: 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .activity-card {
+                padding: 10px;
+            }
+        }
+
+        /* Close button styling */
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            color: #333;
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .close-button:hover {
+            background-color: #ff6f61;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    
+    <div class="container">
+        <a href="tokens.html" class="close-button">&times;</a>
+        <h1>Earn Tokens</h1>
+        
+        <div class="section">
+            <h2>How to Earn Tokens</h2>
+            <p>Participate in various activities and complete tasks to earn tokens. Explore the activities below and start earning!</p>
+        </div>
+
+        <div class="activity-card animate__animated animate__fadeInUp">
+            <h3>Complete Surveys</h3>
+            <p>Fill out short surveys and get rewarded with tokens for each completed survey.</p>
+            <button onclick="window.location.href='survey.html';">Start Survey</button>
+        </div>
+
+        <div class="activity-card animate__animated animate__fadeInUp">
+            <h3>Watch Videos</h3>
+            <p>Watch engaging videos and earn tokens for every video watched. Check out the available videos.</p>
+            <button onclick="window.location.href='videos.html';">Watch Videos</button>
+        </div>
+
+        <div class="activity-card animate__animated animate__fadeInUp">
+            <h3>Refer Friends</h3>
+            <p>Invite your friends to join and earn tokens for each successful referral.</p>
+            <button onclick="window.location.href='referral.html';">Refer Now</button>
+        </div>
+    </div>
+
+    <script src="./phantom.js" type="text/javascript"></script>
+</body>
+</html>

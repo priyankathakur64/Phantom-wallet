@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participate in Draw | Phantom Spin & Win</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="draw.css">
+</head>
+<body>
+    <style>
+        /* General styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background: url("https://wallpapers.com/images/featured/casino-background-9o4pqrpgmrk3lszu.jpg") no-repeat center center/cover;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* Page container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+/* Page Title */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+button {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px;
+    background-color: #6c5ce7;
+    border: 3px solid #20b2aa;
+    border-radius: 5px;
+    color: white;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a4cc9;
+    box-shadow: 0 0 20px rgba(32, 178, 170, 0.8);
+    transform: scale(1.05);
+}
+
+/* Confirmation message */
+.confirmation-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        width: 120px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        width: 100px;
+        padding: 8px;
+    }
+}
+
+    </style>
+    <div class="container">
+        <a href="index.html" class="close-button">&times;</a>
+        <h1>Participate in the Draw!</h1>
+        <p>Enter your details below to participate in our exciting draw for a chance to win amazing prizes!</p>
+
+        <form id="drawForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tokens">Tokens:</label>
+                <input type="number" id="tokens" name="tokens" min="1" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="confirmation-message" id="confirmationMessage"></div>
+    </div>
+
+    <script>
+        document.getElementById('drawForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const tokens = document.getElementById('tokens').value;
+            
+            const confirmationMessage = `Thank you ${name}! Your entry with ${tokens} tokens has been received. We will notify you at ${email} if you win!`;
+            
+            document.getElementById('confirmationMessage').textContent = confirmationMessage;
+            document.getElementById('drawForm').reset();
+        });
+    </script>
+</body>
+</html>
